@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra papel o tijera</title>
+    <script src="./JS/PPT.js">
+    </script>
 </head>
 <body>
     <h1> PIEDRA PAPEL O TIJERA <h1>
     
     <section id="seleccionarPersonaje">
-        <h2>Selecciona tu personaje</h2>
+        <h2>Selecciona tu personaje: </h2>
         
-        Personajes
+        <label for="Leonard">Leonard</label>
+        <input type="radio" name="personaje" id="Leonard" />
 
-        <button>Seleccionar</button>
+        
+        <label for="Penny">Penny</label>
+        <input type="radio" name="personaje" id="Penny" />
+
+        
+        <label for="Sheldon">Sheldon</label>
+        <input type="radio" name="personaje" id="Sheldon" />
+
+        <button id="boton-seleccionar">Seleccionar</button>
 
     </section>
 
@@ -25,9 +36,11 @@
         <p>El contrincante tiene <span>3</span> vidas</p>
 
         <p>
-        <button> Piedra 💎</button>
-        <button> Papel 📃</button>
-        <button> Tijera ✂</button>    
+        <button id="piedra"> Piedra 💎</button>
+        <button id="papel"> Papel 📃</button>
+        <button id="tijera"> Tijera ✂</button> 
+        <button id="lagarto"> Lagarto 🦎</button>
+        <button id="spock"> Spock 🖖</button>    
         </p>
     </section>
 
