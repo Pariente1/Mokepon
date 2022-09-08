@@ -7,13 +7,14 @@ function seleccionarMascotaPersonaje(){
     let inputLeonard = document.getElementById("Leonard")
     let inputPenny = document.getElementById("Penny")
     let inputSheldon = document.getElementById("Sheldon")
-    
+    let spanPersonajeJugador = document.getElementById("personaje-jugador")
+
     if (inputLeonard.checked){
-        alert("Seleccionaste a Leonard")
+        spanPersonajeJugador.innerHTML = "Leonard"
     } else if (inputPenny.checked){
-        alert("Seleccionaste a Penny")
+        spanPersonajeJugador.innerHTML = "Penny"
     } else if (inputSheldon.checked){
-        alert("Seleccionaste a Sheldon")
+        spanPersonajeJugador.innerHTML = "Sheldon"
     } else {
         alert("Debes de seleccionar un personaje")
     }
