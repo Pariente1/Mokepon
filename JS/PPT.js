@@ -1,5 +1,7 @@
 let ataqueJugador   
 let ataqueEnemigo
+let vidasJugador = 5
+let vidasEnemigo = 5
 
 function iniciarJuego(){
     let botonPersonajeJugador = document.getElementById("boton-personaje")
@@ -92,30 +94,55 @@ function ataqueAleatorioEnemigo(){
 }
 
 function combate (){
+    let spanVidasJugador = document.getElementById('vidas-jugador')
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
     if (ataqueEnemigo == ataqueJugador) {
         crearMensaje('Empate')
     } else if (ataqueEnemigo == 'Piedra' && ataqueJugador == 'Papel'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueEnemigo == 'Piedra' && ataqueJugador== 'Spock'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueEnemigo == 'Papel' && ataqueJugador == 'Tijera' ){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueEnemigo == 'Papel' && ataqueJugador == 'Lagarto'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueEnemigo == 'Tijera' && ataqueJugador == 'Piedra'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueEnemigo == 'Tijera' && ataqueJugador == 'Spock'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     }else if (ataqueEnemigo == 'Lagarto' && ataqueJugador == 'Piedra'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     }else if (ataqueEnemigo == 'Lagarto' && ataqueJugador == 'Tijera'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     }else if (ataqueEnemigo == 'Spock' && ataqueJugador== 'Papel'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     }else if (ataqueEnemigo == 'Spock' && ataqueJugador== 'Lagarto'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else{
         crearMensaje('Perdiste')
+        vidasJugador-- 
+        spanVidasJugador.innerHTML = vidasJugador 
     }
 
 }
