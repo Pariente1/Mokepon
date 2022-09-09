@@ -1,8 +1,5 @@
 let ataqueJugador   
-
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
+let ataqueEnemigo
 
 function iniciarJuego(){
     let botonPersonajeJugador = document.getElementById("boton-personaje")
@@ -54,29 +51,46 @@ function seleccionarPersonajeEnemigo() {
 
 function ataquePiedra(){
     ataqueJugador = 'Piedra'
-    alert('Seleccionaste ataque 1')
+    ataqueAleatorioEnemigo()
 }
 
 function ataquePapel(){
     ataqueJugador = 'Papel'
-    alert('Seleccionaste ataque 2')
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueTijera(){
     ataqueJugador = 'Tijera'
-    alert('Seleccionaste ataque 3')
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueLagarto(){
     ataqueJugador = 'Lagarto'
-    alert('Seleccionaste ataque 4')
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueSpock(){
     ataqueJugador = 'Spock'
-    alert('Seleccionaste ataque 5')
+    ataqueAleatorioEnemigo()
 }
 
+function ataqueAleatorioEnemigo(){
+    let ataqueAleatorio = random(1,5)
+    if(ataqueAleatorio == 1){
+        ataqueEnemigo = 'Piedra'
+    } else if(ataqueAleatorio == 2){
+        ataqueEnemigo = 'Papel'
+    } else if (ataqueAleatorio == 3){
+        ataqueEnemigo = 'Tijera'
+    }else if (ataqueAleatorio == 4){
+        ataqueEnemigo = 'Lagarto'
+    } else {
+        ataqueEnemigo = 'Spock'
+    }
+}
 
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 window.addEventListener('load', iniciarJuego)
