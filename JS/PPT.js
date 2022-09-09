@@ -145,12 +145,29 @@ function combate (){
         spanVidasJugador.innerHTML = vidasJugador 
     }
 
+    revisarVidas()
+}
+
+function revisarVidas(){
+    if(vidasEnemigo == 0){
+        crearMensajeFinal('Haz Ganado')
+    } else if(vidasJugador == 0){
+        crearMensajeFinal('Haz Perdido')
+    }
 }
 
 function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
     parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ' el rival ataco con ' + ataqueEnemigo + ' ' + resultado
+
+    sectionMensajes.appendChild(parrafo)
+}
+
+function crearMensajeFinal(resultadoFinal){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = resultadoFinal
 
     sectionMensajes.appendChild(parrafo)
 }
