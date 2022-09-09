@@ -1,3 +1,7 @@
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 function iniciarJuego(){
     let botonPersonajeJugador = document.getElementById("boton-personaje")
 botonPersonajeJugador.addEventListener('click', seleccionarMascotaPersonaje)
@@ -18,8 +22,23 @@ function seleccionarMascotaPersonaje(){
     } else {
         alert("Debes de seleccionar un personaje")
     }
+
+    seleccionarPersonajeEnemigo()
 }
 
-let botonPersonajeEnemigo 
+function seleccionarPersonajeEnemigo() {
+    let enemigoAleatorio = random(1,3)
+    let spanPersonajeEnemigo = document.getElementById('personaje-enemigo')
+
+    if (enemigoAleatorio == 1) {
+        spanPersonajeEnemigo.innerHTML = 'Leonard'
+    } else if (enemigoAleatorio == 2) {
+        spanPersonajeEnemigo.innerHTML = 'Penny'
+    } else {
+        spanPersonajeEnemigo.innerHTML = 'Sheldon'
+    }
+}
+
+
 
 window.addEventListener('load', iniciarJuego)
