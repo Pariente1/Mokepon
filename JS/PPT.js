@@ -87,6 +87,16 @@ function ataqueAleatorioEnemigo(){
     } else {
         ataqueEnemigo = 'Spock'
     }
+
+    crearMensaje()
+}
+
+function crearMensaje(){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + 'el rival ataco con ' + ataqueEnemigo + ' pendiente victoria/derrota'
+
+    sectionMensajes.appendChild(parrafo)
 }
 
 function random(min, max) {
