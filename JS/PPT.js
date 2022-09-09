@@ -88,13 +88,42 @@ function ataqueAleatorioEnemigo(){
         ataqueEnemigo = 'Spock'
     }
 
-    crearMensaje()
+    combate()
 }
 
-function crearMensaje(){
+function combate (){
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensaje('Empate')
+    } else if (ataqueEnemigo == 'Piedra' && ataqueJugador == 'Papel'){
+        crearMensaje('Ganaste')
+    } else if (ataqueEnemigo == 'Piedra' && ataqueJugador== 'Spock'){
+        crearMensaje('Ganaste')
+    } else if (ataqueEnemigo == 'Papel' && ataqueJugador == 'Tijera' ){
+        crearMensaje('Ganaste')
+    } else if (ataqueEnemigo == 'Papel' && ataqueJugador == 'Lagarto'){
+        crearMensaje('Ganaste')
+    } else if (ataqueEnemigo == 'Tijera' && ataqueJugador == 'Piedra'){
+        crearMensaje('Ganaste')
+    } else if (ataqueEnemigo == 'Tijera' && ataqueJugador == 'Spock'){
+        crearMensaje('Ganaste')
+    }else if (ataqueEnemigo == 'Lagarto' && ataqueJugador == 'Piedra'){
+        crearMensaje('Ganaste')
+    }else if (ataqueEnemigo == 'Lagarto' && ataqueJugador == 'Tijera'){
+        crearMensaje('Ganaste')
+    }else if (ataqueEnemigo == 'Spock' && ataqueJugador== 'Papel'){
+        crearMensaje('Ganaste')
+    }else if (ataqueEnemigo == 'Spock' && ataqueJugador== 'Lagarto'){
+        crearMensaje('Ganaste')
+    } else{
+        crearMensaje('Perdiste')
+    }
+
+}
+
+function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + 'el rival ataco con ' + ataqueEnemigo + ' pendiente victoria/derrota'
+    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ' el rival ataco con ' + ataqueEnemigo + ' ' + resultado
 
     sectionMensajes.appendChild(parrafo)
 }
