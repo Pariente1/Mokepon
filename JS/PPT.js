@@ -1,10 +1,23 @@
+let ataqueJugador   
+
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 function iniciarJuego(){
     let botonPersonajeJugador = document.getElementById("boton-personaje")
-botonPersonajeJugador.addEventListener('click', seleccionarMascotaPersonaje)
+    botonPersonajeJugador.addEventListener('click', seleccionarMascotaPersonaje)
+
+    let botonPiedra = document.getElementById("piedra")
+    botonPiedra.addEventListener("click", ataquePiedra)
+    let botonPapel = document.getElementById("papel")
+    botonPapel.addEventListener("click", ataquePapel)
+    let botonTijera = document.getElementById("tijera")
+    botonTijera.addEventListener("click", ataqueTijera)
+    let botonLagarto = document.getElementById("lagarto")
+    botonLagarto.addEventListener("click", ataqueLagarto)
+    let botonSpock = document.getElementById("spock")
+    botonSpock.addEventListener("click", ataqueSpock)
 }
 
 function seleccionarMascotaPersonaje(){
@@ -37,6 +50,31 @@ function seleccionarPersonajeEnemigo() {
     } else {
         spanPersonajeEnemigo.innerHTML = 'Sheldon'
     }
+}
+
+function ataquePiedra(){
+    ataqueJugador = 'Piedra'
+    alert('Seleccionaste ataque 1')
+}
+
+function ataquePapel(){
+    ataqueJugador = 'Papel'
+    alert('Seleccionaste ataque 2')
+}
+
+function ataqueTijera(){
+    ataqueJugador = 'Tijera'
+    alert('Seleccionaste ataque 3')
+}
+
+function ataqueLagarto(){
+    ataqueJugador = 'Lagarto'
+    alert('Seleccionaste ataque 4')
+}
+
+function ataqueSpock(){
+    ataqueJugador = 'Spock'
+    alert('Seleccionaste ataque 5')
 }
 
 
