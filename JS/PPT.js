@@ -17,6 +17,9 @@ function iniciarJuego(){
     botonLagarto.addEventListener("click", ataqueLagarto)
     let botonSpock = document.getElementById("spock")
     botonSpock.addEventListener("click", ataqueSpock)
+
+    let botonReiniciar = document.getElementById('boton-reiniciar')
+    botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaPersonaje(){
@@ -170,6 +173,21 @@ function crearMensajeFinal(resultadoFinal){
     parrafo.innerHTML = resultadoFinal
 
     sectionMensajes.appendChild(parrafo)
+
+    let botonPiedra = document.getElementById("piedra")
+    botonPiedra.disabled = true
+    let botonPapel = document.getElementById("papel")
+    botonPapel.disabled = true
+    let botonTijera = document.getElementById("tijera")
+    botonTijera.disabled = true
+    let botonLagarto = document.getElementById("lagarto")
+    botonLagarto.disabled = true
+    let botonSpock = document.getElementById("spock")
+    botonSpock.disabled = true
+}
+
+function reiniciarJuego(){
+    location.reload()
 }
 
 function random(min, max) {
