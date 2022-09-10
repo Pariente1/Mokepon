@@ -7,6 +7,9 @@ function iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = 'none'
 
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
     let botonPersonajeJugador = document.getElementById("boton-personaje")
     botonPersonajeJugador.addEventListener('click', seleccionarMascotaPersonaje)
 
@@ -26,6 +29,9 @@ function iniciarJuego(){
 }
 
 function seleccionarMascotaPersonaje(){
+    let sectionSeleccionarPersonaje = document.getElementById("seleccionar-personaje")
+    sectionSeleccionarPersonaje.style.display = 'none'
+
     let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = 'block'
     
@@ -190,6 +196,9 @@ function crearMensajeFinal(resultadoFinal){
     botonLagarto.disabled = true
     let botonSpock = document.getElementById("spock")
     botonSpock.disabled = true
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
 }
 
 function reiniciarJuego(){
