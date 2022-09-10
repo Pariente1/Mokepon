@@ -4,6 +4,9 @@ let vidasJugador = 5
 let vidasEnemigo = 5
 
 function iniciarJuego(){
+    let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
+    sectionSeleccionarAtaque.style.display = 'none'
+
     let botonPersonajeJugador = document.getElementById("boton-personaje")
     botonPersonajeJugador.addEventListener('click', seleccionarMascotaPersonaje)
 
@@ -23,6 +26,9 @@ function iniciarJuego(){
 }
 
 function seleccionarMascotaPersonaje(){
+    let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
+    sectionSeleccionarAtaque.style.display = 'block'
+    
     let inputLeonard = document.getElementById("Leonard")
     let inputPenny = document.getElementById("Penny")
     let inputSheldon = document.getElementById("Sheldon")
