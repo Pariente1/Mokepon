@@ -1,0 +1,74 @@
+#titulo {
+    color: var(--text);
+    color: rgba(228,238,249,5);
+    width: 400px;
+    height: 50px;
+    font-size: 2rem;
+    
+}
+
+label{
+    background-color: tomato;
+    width: 400px;
+    height: 50px;
+}
+
+input{
+    background-color: aliceblue;
+    width: 400px;
+    height: 50px;
+}
+
+button{
+    background-color: purple;
+    width: 400px;
+    height: 50px;
+}
+
+body {
+
+	background-image: url(/assets/big_bang_theory_wallpaper_by_shangha1_d1qaw02-pre.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+h2 {
+    color: #5b11fc8f;
+	font-size: 1.5rem;
+	padding: 1rem;
+    text-transform: uppercase;
+}
+
+#seleccionar-personaje{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column; 
+    
+}
+
+.tarjeta-personaje{
+    margin: 10px;
+    background: linear-gradient(90deg, rgb(47, 4, 107) 40%, rgba(114,62,204,0) 90%, rgb(17, 2, 37) 20%, rgba(230,212,255,1) 83%);
+    font-size: 40px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ 
+}
+
+#boton-personaje{
+    background-color: rgb(91, 149, 161);
+    color: rgb(125, 7, 188);
+    font-size: 40px;
+    background: linear-gradient(90deg, rgba(226,205,255,1) 8%, rgba(107,0,255,1) 34%, rgba(193,149,255,1) 64%, rgba(107,0,255,1) 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input{
+    display: none;
+}

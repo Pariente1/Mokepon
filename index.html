@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra papel o tijera</title>
     <script src="./JS/PPT.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> PIEDRA PAPEL O TIJERA <h1>
+    <h1 id="titulo"> PIPATILAS <h1>
     
     <section id="seleccionar-personaje">
         <h2>Selecciona tu personaje: </h2>
         
-        <label for="Leonard">Leonard</label>
+        <label class="tarjeta-personaje" for="Leonard">Leonard</label>
         <input type="radio" name="personaje" id="Leonard" />
 
         
-        <label for="Penny">Penny</label>
+        <label class="tarjeta-personaje" for="Penny">Penny</label>
         <input type="radio" name="personaje" id="Penny" />
 
         
-        <label for="Sheldon">Sheldon</label>
+        <label class="tarjeta-personaje" for="Sheldon">Sheldon</label>
         <input type="radio" name="personaje" id="Sheldon" />
 
         <button id="boton-personaje">Seleccionar</button>
