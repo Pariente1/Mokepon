@@ -29,9 +29,13 @@ input{
 }
 
 button{
-    background-color: purple;
     width: 400px;
     height: 50px;
+    background: linear-gradient(90deg, rgb(161, 210, 237) 40%, rgba(114,62,204,0) 90%, rgb(17, 2, 37) 60%, rgba(230,212,255,1) 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none
+    display: flex
 }
 
 body {
@@ -59,7 +63,7 @@ h2 {
     
 }
 
-#Leonard-text {
+#Leonard-text, #Vidas-Jugador-1, #Vidas-Jugador-2 {
     margin: 10px;
     background: linear-gradient(90deg, rgb(254, 254, 255) 40%, rgba(114,62,204,0) 90%, rgb(17, 2, 37) 60%, rgba(230,212,255,1) 83%);
     -webkit-background-clip: text;
@@ -89,3 +93,6 @@ h2 {
 input{
     display: none;
 }
+
+/* Segunda pantalla */
+
